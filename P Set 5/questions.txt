@@ -1,0 +1,19 @@
+0.  a pneumoconiosis caused by inhalation of very fine silicate or quartz dust.
+1.  getrusage() returns resource usage measures for its first arg into the second struct arg.
+2.  there are many members of rusage struct, but we are only interested in two: struct timeval ru_utime -- user time AND struct timeval ru_stime -- kernel loading time
+3.  we pass before and after structs by reference so that the getrusage() function can modify its two structs.
+4.  HOW OUR PROGRAM WORKS::
+    First of all, we load the dictionary into memory. Then we open the text whose words are to be spell-checked, and read each of its chars.
+    For each char, we check 
+    - if it is alphabetical, or an aphostrope that is a latter part of the word. If true, we append it to char array word. If the 
+        length exceeds the max length, we reject the word and move on to the next word.
+    - else if it is a number, we reject it and consume all its latter letters.
+    - else if index > 0, we append '\0' to the char array word as we have read all the chars of the word, and update word count.
+        Then we check if the read word is correctly spelled or not by calling function check(word).
+5.  we preferred fgetc to fscanf cuz we need to check each char bytes as the length of words is a variable, rather than reading a
+        block into a struct with some members.
+6.  we used const in check and load cuz we don't want modification to the pointer arguments passed.
+7.  TODO
+8.  TODO
+9.  TODO
+10. TODO

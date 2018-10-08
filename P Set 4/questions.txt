@@ -1,0 +1,21 @@
+0.  gif- 256 png-2^48(2^24 normally) jpg-2^24 bmp-2^32
+1.  only gif supports animation
+2.  lossy- file size compressed but image quality remains same. allows recovering original image again      lossless- file size and image quality both are reduced. data are permanently deleted.
+3.  lossy-jpeg,gif(not so lossy as jpeg though)    lossless-png,bmp
+4.  When the operating system erases a FAT file, two things occur. First, the system modifies the filename’s first character in the file’s directory entry to signal that the file
+    has been deleted and that the directory entry can be recycled. Second, the system moves all of the file’s FAT clusters
+    to the hard drive’s list of free clusters. The actual file data is never touched.
+5.  To sanitize the disk properly, the disk blocks must be filled with Guttman patterns, degauss the disk or sabotage it.
+6.  stdint.h is a header file in the C standard library introduced in the C99 standard library section 7.18 to allow programmers to write more portable code by providing a set of typedefs that specify exact-width integer types, together with the defined minimum and maximum allowable values for each type, using macros .
+7.  uint8_t-8 bit unsigned integer unit16_t-16 bit unsigned int uint32_t-32 bit unsigned int32_t-32 bit signed
+8.  byte-8bit word-16bit dword-32bit long-signed32bit
+9.  the first 2 bytes of bitmap are ascii values of characters "B" & "M" i.e. 01000010 01001101 in hex 0x424D
+10. bfsize is the total size of bitmap file while bisize is the size required by the bitmapinfoheader structure.
+11. If biHeight is positive, the bitmap is a bottom-up DIB and its origin is the lower-left corner. If biHeight is negative, the bitmap is a top-down DIB and its origin is the upper-left corner.
+12. biBitCount gives the color depth (i.e. bits per pixel)
+13. NULL might be returned while writing in a file if there is no permission for the executable to write on the disk or the filename entered is not valid.
+14. there is 1 in fread because we are concerned with reading required information only once from the file into the structure.
+15. if biWidth is 3, the padding will be (4-(3*3)%4)%4 = 3
+16. fseek is used to seek the file indicator to desired position in the file.
+17. SEEK_CUR is the current position of the file indicator(pointer).
+18. Solved!!!
